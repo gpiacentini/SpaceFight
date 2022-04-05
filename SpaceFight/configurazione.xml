@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParametriConfig>
+	<ipClient>127.0.0.1</ipClient>
+	<ipServer>127.0.0.1</ipServer>
+	<portaServer>8080</portaServer>
+	<usernameDatabase>root</usernameDatabase>
+	<passwordDatabase></passwordDatabase>
+	<numeroCampiTabella>30</numeroCampiTabella>
+	<etaMassimaInGiorni>30</etaMassimaInGiorni>
+</ParametriConfig>

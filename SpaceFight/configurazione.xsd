@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ParametriConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ipClient" type="xs:string" />
+				<xs:element name="ipServer" type="xs:string" />
+				<xs:element name="portaServer">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0" />
+							<xs:maxInclusive value="65535" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="usernameDatabase" type="xs:string" />
+				<xs:element name="passwordDatabase" type="xs:string" />
+				<xs:element name="numeroCampiTabella">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1" />
+							<xs:maxInclusive value="65535" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="etaMassimaInGiorni" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
