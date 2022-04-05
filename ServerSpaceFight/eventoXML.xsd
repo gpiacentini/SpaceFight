@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="EventGUI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nomeApplicazione" type="xs:string" />
+				<xs:element name="ipClient" type="xs:string" />
+				<xs:element name="etichettaEvento">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="AVVIO"/>
+							<xs:enumeration value="START"/>
+							<xs:enumeration value="TERMINE"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DataFormato">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="data" type="xs:date"/>
+						</xs:sequence>
+						<xs:attribute name="formato" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OraFormato">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ora" type="xs:time"/>
+						</xs:sequence>
+						<xs:attribute name="formato" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
